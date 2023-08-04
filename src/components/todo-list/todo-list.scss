@@ -1,0 +1,21 @@
+.table {
+  width: 100%;
+  margin-top: 5px;
+
+  &__header {
+    background-color: #bdecb6;
+  }
+}
+
+.todo-list-table-row {
+  &__task-title {
+    text-align: center;
+    width: 68%;
+    font-size: 2.2rem;
+  }
+
+  &__task-btn {
+    width: 8%;
+    font-size: 2rem;
+  }
+}

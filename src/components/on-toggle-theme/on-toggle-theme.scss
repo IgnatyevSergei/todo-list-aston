@@ -1,0 +1,21 @@
+.theme-controller {
+  display: flex;
+  justify-content: flex-end;
+
+  &__btn {
+    width: 50px;
+    height: 25px;
+    border: 1px solid #32cd32;
+    border-radius: 8%;
+  }
+
+  &__btn:disabled {
+    background: rgba(76, 82, 85, 0.4);
+    color: rgba(255, 255, 255, 0.4);
+
+    &__btn:active {
+      background: rgba(174, 181, 185, 0.5);
+      color: #ffffff;
+    }
+  }
+}
