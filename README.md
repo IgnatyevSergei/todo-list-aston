@@ -1,3 +1,5 @@
+deploy: https://64ce8a882ca8575ed7a964f9--dancing-daifuku-503608.netlify.app/ 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
