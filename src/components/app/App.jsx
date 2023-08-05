@@ -13,7 +13,7 @@ class App extends Component {
       items: [],
       searchText: '',
       filter: 'all',
-      theme: 'light',
+      theme: '',
     };
   }
 
@@ -125,9 +125,11 @@ class App extends Component {
 
   componentDidMount() {
     let localStorageData = JSON.parse(localStorage.getItem('todoList'));
+    let localStorageTheme = JSON.parse(localStorage.getItem('theme'));
     if (localStorageData !== null) {
       this.setState({
         items: localStorageData,
+        theme: localStorageTheme,
       });
     }
   }
@@ -142,7 +144,6 @@ class App extends Component {
     if (items.length === 0) {
       localStorage.clear('todoList');
     }
-    console.log(items.length);
     if (items.length > 1) {
       for (let i = 0; i < items.length; i++) {
         if (items[i].label !== localStorageData[i]?.label) {
@@ -167,13 +168,17 @@ class App extends Component {
       this.filterItems(items, filter),
       searchText
     );
+    let style = 'container';
+    if (theme === 'dark') {
+      style += '-dark';
+    }
 
     return (
-      <div className='container'>
+      <div className={style}>
         <AppHeader />
         <OnToggleTheme
-          onToggleDarkTheme={()=>this.onToggleDarkTheme()}
-          onToggleLightTheme={()=>this.onToggleLightTheme()}
+          onToggleDarkTheme={() => this.onToggleDarkTheme()}
+          onToggleLightTheme={() => this.onToggleLightTheme()}
           theme={theme}
         />
         <ItemAddForm
@@ -181,10 +186,12 @@ class App extends Component {
           openModalWindow={() => this.openModalWindow()}
           closeModalWindow={this.closeModalWindow}
           showModalWindow={this.state.showModalWindow}
+          theme={theme}
         />
         <ItemStatusFilter
           onFilter={this.onFilterChange}
           setSearchText={this.setSearchText}
+          theme={theme}
         />
         <TodoList
           items={visibleItems}
@@ -195,6 +202,7 @@ class App extends Component {
           openModalWindow={() => this.openModalWindow()}
           closeModalWindow={this.closeModalWindow}
           onItemEdit={this.onItemEdit}
+          theme={theme}
         />
       </div>
     );

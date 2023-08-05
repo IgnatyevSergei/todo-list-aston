@@ -45,6 +45,11 @@ class ItemAddForm extends Component {
 
   render() {
     const { label, description, isShow } = this.state;
+    const { theme } = this.props;
+    let style = 'addTaskBtn';
+    if (theme === 'dark') {
+      style += ' dark';
+    }
     if (isShow) {
       return (
         <>
@@ -56,7 +61,7 @@ class ItemAddForm extends Component {
             label={label}
             description={description}
           />
-          <button className='addTaskBtn' onClick={this.openModalWindow}>
+          <button className={style} onClick={this.openModalWindow}>
             Add task
           </button>
         </>
@@ -64,7 +69,7 @@ class ItemAddForm extends Component {
     }
 
     return (
-      <button className='addTaskBtn' onClick={this.openModalWindow}>
+      <button className={style} onClick={this.openModalWindow}>
         Add task
       </button>
     );

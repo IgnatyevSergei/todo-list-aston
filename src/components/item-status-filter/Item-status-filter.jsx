@@ -12,10 +12,15 @@ const filterButtons = [
 
 class ItemStatusFilter extends Component {
   render() {
+    const {theme} = this.props
+    let style = 'btn-controller';
+    if(theme === 'dark') {
+      style += ' dark'
+    }
     const buttons = filterButtons.map((button) => {
       return (
         <button
-          className='btn-controller'
+          className={style}
           key={button.name}
           onClick={() => this.props.onFilter(button.name)}>
           {button.label}

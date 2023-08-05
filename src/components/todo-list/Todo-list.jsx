@@ -13,11 +13,17 @@ class TodoList extends Component {
       openModalWindow,
       closeModalWindow,
       onItemEdit,
+      theme,
     } = this.props;
+
+    let style = 'table__header';
+    if (theme === 'dark') {
+      style += '-dark';
+    }
 
     return (
       <table className='table'>
-        <thead className='table__header'>
+        <thead className={style}>
           <tr className='todo-list-table-row'>
             <th className='todo-list-table-row__task-title'>Task</th>
             <th className='todo-list-table-row__task-btn'>Edit</th>

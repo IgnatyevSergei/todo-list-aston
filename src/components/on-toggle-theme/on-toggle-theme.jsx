@@ -4,7 +4,6 @@ import './on-toggle-theme.scss'
 class OnToggleTheme extends Component {
   render() {
     const { onToggleDarkTheme, onToggleLightTheme, theme } = this.props;
-    console.log(theme);
     return (
       <div className='theme-controller'>
         <button

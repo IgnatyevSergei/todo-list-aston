@@ -23,7 +23,6 @@ class ShowTask extends Component {
 
   handelChangeTask = () => {
     const { id, items } = this.props;
-    console.log(items);
     const index = items.findIndex((el) => el.id === id);
     this.setState({
       newLabel: items[index].label,
