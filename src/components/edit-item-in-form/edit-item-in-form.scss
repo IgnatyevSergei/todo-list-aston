@@ -1,0 +1,12 @@
+.item-btn {
+  width: 80%;
+  height: 40px;
+  border: none;
+  background-color: inherit;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}

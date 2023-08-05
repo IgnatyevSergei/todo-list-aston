@@ -1,0 +1,34 @@
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table-task-content {
+  font-size: 2rem;
+}
+
+.table-btn {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.done {
+  color: green;
+  text-decoration: line-through;
+}
+
+.archive {
+  color: brown;
+}
+
+.item-btn {
+  width: 80%;
+  height: 40px;
+  border: none;
+  background-color: inherit;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}

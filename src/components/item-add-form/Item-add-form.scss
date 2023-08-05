@@ -1,0 +1,30 @@
+.addTaskBtn {
+  font-size: 1.7rem;
+  font-weight: 550;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #32cd32;
+  background-color: #fff;
+  color: #32cd32;
+  cursor: pointer;
+  margin-bottom: 2%;
+
+  &:hover {
+    background-color: #bdecb6;
+    color: #000;
+    transition: 0.5s ease;
+    font-style: italic;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25), 0 5px 8px rgba(0, 0, 0, 0.22);
+  }
+}
+
+.dark{
+  background-color: #082118;
+  color: #fff
+}
+
+.dark:hover {
+  background-color: #32cd32;
+  color: #fff;
+}

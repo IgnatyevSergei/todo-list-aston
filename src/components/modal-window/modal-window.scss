@@ -1,0 +1,72 @@
+.modal-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #857070b3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-window-container {
+  width: 370px;
+  height: 240px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #bdecb6;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__title {
+    width: 350px;
+    height: 40px;
+    background: #fff;
+    outline: none;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    width: 350px;
+    height: 100px;
+    padding-top: 2%;
+    margin-bottom: 5px;
+  }
+
+  &__title,
+  &__description {
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding-left: 5px;
+  }
+
+  &__task-name,
+  &__task-description {
+    font-size: 1.7rem;
+    align-self: flex-start;
+    padding-left: 7px;
+    font-weight: bold;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+.modalBtn {
+  width: 70px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
