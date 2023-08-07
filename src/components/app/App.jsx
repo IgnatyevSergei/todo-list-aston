@@ -81,7 +81,7 @@ class App extends Component {
     });
   };
 
-  onToggleImportant = (id) => {
+  onToggleArchive = (id) => {
     this.setState((state) => {
       const items = this.toggleProperties(state.items, id, 'archive');
       return {
@@ -142,7 +142,7 @@ class App extends Component {
       localStorage.setItem('theme', JSON.stringify(this.state.theme));
     }
     if (items.length === 0) {
-      localStorage.clear('todoList');
+      localStorage.removeItem('todoList');
     }
     if (items.length > 1) {
       for (let i = 0; i < items.length; i++) {
@@ -197,7 +197,7 @@ class App extends Component {
           items={visibleItems}
           onRemove={(id) => this.onRemove(id)}
           onToggleDone={this.onToggleDone}
-          onToggleImportant={this.onToggleImportant}
+          onToggleArchive={this.onToggleArchive}
           showModalWindow={this.state.showModalWindow}
           openModalWindow={() => this.openModalWindow()}
           closeModalWindow={this.closeModalWindow}
