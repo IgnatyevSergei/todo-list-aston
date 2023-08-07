@@ -8,7 +8,7 @@ class TodoList extends Component {
       items,
       onRemove,
       onToggleDone,
-      onToggleImportant,
+      onToggleArchive,
       showModalWindow,
       openModalWindow,
       closeModalWindow,
@@ -38,7 +38,7 @@ class TodoList extends Component {
             items={items}
             onRemove={(id) => onRemove(id)}
             onToggleDone={(id) => onToggleDone(id)}
-            onToggleImportant={(id) => onToggleImportant(id)}
+            onToggleArchive={(id) => onToggleArchive(id)}
             showModalWindow={showModalWindow}
             openModalWindow={openModalWindow}
             closeModalWindow={closeModalWindow}

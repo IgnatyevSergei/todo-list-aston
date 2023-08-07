@@ -12,7 +12,7 @@ class TodoListItem extends Component {
       items,
       onRemove,
       onToggleDone,
-      onToggleImportant,
+      onToggleArchive,
       closeModalWindow,
       openModalWindow,
       showModalWindow,
@@ -29,7 +29,6 @@ class TodoListItem extends Component {
       }
       return (
         <tr className='row' key={id}>
-          {/* <td className={style}>{label}</td> */}
           <ShowTask
             styleProps={style}
             label={label}
@@ -53,7 +52,7 @@ class TodoListItem extends Component {
             </button>
           </td>
           <td className='table-btn'>
-            <button className='item-btn' onClick={() => onToggleImportant(id)}>
+            <button className='item-btn' onClick={() => onToggleArchive(id)}>
               <BiArchiveIn size='25' />
             </button>
           </td>
